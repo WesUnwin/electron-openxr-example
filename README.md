@@ -1,17 +1,16 @@
 # electron-openxr-example
-This is an example hello-world style electron app, that demonstrates a working VR app (that can enter immersive-vr on a headset connecting to your PC).
+A fully complete, example electron app, that can actually enter immersive-vr via a VR headset connected to your PC.
+
 With normal electron builds, this is currently not possible due to how the version of chromium can not use OpenXR to launch the VR app.
+This custom electron build (based on electron@17.0.0) is included in this repo, zipped so that it stays under the 100 MB git file size limit.
 
-Web App -> Electron/Chromium BrowserWindow -> electron.exe app running on windows -> Open XR -> Open XR Runtime -> Connected VR Headset
+Web App -> Electron/Chromium BrowserWindow -> electron.exe windows app -> Open XR Runtime -> Connected VR Headset
 
-* Where the web app may be a set of javascripts locally packaged by the app, or instead a URL to a website like: https://threejs.org/examples/webxr_vr_ballshooter.html
+* Where the web app may be a set of javascripts locally packaged and distributed by the app, or instead a URL to a website like: https://threejs.org/examples/webxr_vr_ballshooter.html that will be loaded in the browser window.
 
-of how to make a WebXR application running inside Electron being able,
-to launch using OpenXR (using a custom electron build with checkout_openxr enabled).
+This allows you to build WebXR web applications, and distribute them as a desktop app (pretty cool :))
 
-This allows you to build useable VR/AR apps using web technologies, and distribute them as a desktop app.
-
-This is not a template, but just a working, 100% complete proof of concept app.
+This is not a template, but a minimal, "hello world" style app, that serves as a proof of concept.
 
 # Running this Example App:
 

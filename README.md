@@ -1,5 +1,12 @@
 # electron-openxr-example
-Example of how to make a WebXR application running inside Electron being able,
+This is an example hello-world style electron app, that demonstrates a working VR app (that can enter immersive-vr on a headset connecting to your PC).
+With normal electron builds, this is currently not possible due to how the version of chromium can not use OpenXR to launch the VR app.
+
+Web App -> Electron/Chromium BrowserWindow -> electron.exe app running on windows -> Open XR -> Open XR Runtime -> Connected VR Headset
+
+* Where the web app may be a set of javascripts locally packaged by the app, or instead a URL to a website like: https://threejs.org/examples/webxr_vr_ballshooter.html
+
+of how to make a WebXR application running inside Electron being able,
 to launch using OpenXR (using a custom electron build with checkout_openxr enabled).
 
 This allows you to build useable VR/AR apps using web technologies, and distribute them as a desktop app.
@@ -12,6 +19,9 @@ This is not a template, but just a working, 100% complete proof of concept app.
 2. Note: node_modules is intentionally included just to provide a 100% complete proof of concept app.
 3. Install the latest KTS release Node (https://nodejs.org/en/download/) at the time i used 16.14.0.
 4. Run npm start within the repo from a command prompt (this runs electron.exe pointing it to main.js)
+5. Make sure your headset (eg. Occulus Quest 2) is connected.
+ * For a Quest 2: install the Occulus app for windows, ensure in settings OpenXR runtime is set, connect via a USB C cable or Air link, in headset make sure to "Enable Link"
+6. Click the "Enter VR" button inside the browser window of the app to launch the app, so you can view/play it on your conected headset.
 
 # Required Windows ACLs
 The electron app when running on windows will need to grant ACLs in order to be able to talk to OpenXR to launch

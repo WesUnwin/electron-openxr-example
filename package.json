@@ -1,0 +1,19 @@
+{
+  "name": "electron-webxr-test-app",
+  "productName": "electron-webxr-test-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": ".\\custom_electron_build\\electron.exe .\\src\\main.js"
+  },
+  "keywords": ["WebXR", "Electron", "OpenXR"],
+  "author": "Wes Unwin",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "17.0.0"
+  }
+}

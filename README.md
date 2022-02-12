@@ -10,12 +10,20 @@ This is not a template, but just a working, 100% complete proof of concept app.
 
 1. Clone this repo
 2. Note: node_modules is intentionally included just to provide a 100% complete proof of concept app.
+3. Install the latest KTS release Node (https://nodejs.org/en/download/) at the time i used 16.14.0.
+4. Run npm start within the repo from a command prompt (this runs electron.exe pointing it to main.js)
 
 # Required Windows ACLs
 The electron app when running on windows will need to grant ACLs in order to be able to talk to OpenXR to launch
 the VR app in immersive mode. See src/WindowsACLs.js for the code that takes care of this.
 
 # The Custom Electron Build
+To make this work, allowing you to actually enter immersive vr (navigator.xr.requestSession('immersive-vr')), I needed to make a custom
+build of the latest electron npm package (at the time of this 17.0.0 was the latest release of electron).
+
+Secondly, I used an Occulus Quest 2, and installed the Occulus windows app, and made sure the device was connected, and that I had enabled occulus link,
+via the prompt from within the headset.
+
 Normal builds of electron will not work, due to the fact that they are not setup to be able to use OpenXR, it is
 necessary to follow the procedure of building a custom version of electron where the ENABLE_VR flag is on, and
 the build flag (checkout_openxr) is enabled to produce a version of chromium that can work with open xr.

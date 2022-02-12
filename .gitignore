@@ -1,0 +1,4 @@
+# You must produce this by unzipping custom_electron_build.zip (can' be commited as > 100 MB, and git does not like large files)
+custom_electron_build
+
+node_modules

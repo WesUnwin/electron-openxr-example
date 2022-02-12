@@ -15,13 +15,14 @@ This is not a template, but just a working, 100% complete proof of concept app.
 
 # Running this Example App:
 
-1. Clone this repo
-2. Note: node_modules is intentionally included just to provide a 100% complete proof of concept app.
-3. Install the latest KTS release Node (https://nodejs.org/en/download/) at the time i used 16.14.0.
-4. Run npm start within the repo from a command prompt (this runs electron.exe pointing it to main.js)
-5. Make sure your headset (eg. Occulus Quest 2) is connected.
+1. Install git + clone this repo
+2. Install the latest LTS release of Node (https://nodejs.org/en/download/) at the time i used 16.14.0.
+3. Run npm install in this repo.
+4. UNZIP custom_electron_build.zip (so you have a custom_electron_build/ folder in this repo) necessary since the build uncompressed is too large for git.
+5. Run npm start within the repo from a command prompt (this runs electron.exe pointing it to main.js)
+6. Make sure your headset (eg. Occulus Quest 2) is connected.
  * For a Quest 2: install the Occulus app for windows, ensure in settings OpenXR runtime is set, connect via a USB C cable or Air link, in headset make sure to "Enable Link"
-6. Click the "Enter VR" button inside the browser window of the app to launch the app, so you can view/play it on your conected headset.
+7. Click the "Enter VR" button inside the browser window of the app to launch the app, so you can view/play it on your conected headset.
 
 # Required Windows ACLs
 The electron app when running on windows will need to grant ACLs in order to be able to talk to OpenXR to launch

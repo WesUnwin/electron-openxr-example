@@ -50,6 +50,13 @@ Use e sync to pull all the necessary source code that will be needed to build:
 e sync
 ```
 
+Checkout the desired version of electron (unless you want to use the tip of the main branch which is the default):
+
+```
+cd ~\electron\src\electron
+git checkout tags/v17.0.0 -b custom-build-17.0.0
+```
+
 Modify ~/electron/src/electron/DEPS, changing checkout_openxr to True.
 
 ```
